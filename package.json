@@ -1,0 +1,13 @@
+{
+  "name": "static-site-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/markuswustenberg/static-site-template.git",
+  "author": "Markus Wüstenberg <markus@wustenberg.dk>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "bulma": "^0.7.5",
+    "node-sass": "^4.12.0"
+  }
+}
