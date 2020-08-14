@@ -1,13 +1,19 @@
-.PHONY: build prettier start watch
+.PHONY: build clean prettier start watch
 
-build:
-	./node_modules/.bin/node-sass --output-style compressed sass/app.scss docs/styles/app.css
+build: clean
+	ssssg build
+	sass --style compressed sass/app.scss docs/styles/app.css
+	prettier --write "docs/**/*.html"
+
+clean:
+	rm -rf docs/*
 
 prettier:
-	prettier --write "docs/**/*.{html,js}"
+	prettier --write "layouts/**/*.html"
+	prettier --write "pages/**/*.html"
 
 start:
-	static -a 0.0.0.0 docs
+	ssssg serve
 
 watch:
-	./node_modules/.bin/node-sass --omit-source-map-url --watch sass/app.scss docs/styles/app.css
+	sass --watch sass/app.scss docs/styles/app.css
