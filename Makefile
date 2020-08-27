@@ -9,6 +9,7 @@ clean:
 	rm -rf docs/*
 
 prettier:
+	prettier --write "components/**/*.html"
 	prettier --write "layouts/**/*.html"
 	prettier --write "pages/**/*.html"
 

@@ -1,3 +1,9 @@
+{{template "layouts/default"}}
+
+{{define "title"}}Static Site Template{{end}}
+{{define "description"}}Look around, you'll find it sparkly and nice.{{end}}
+
+{{define "content"}}
 <section class="hero is-primary is-fullheight is-bold">
   <div class="hero-head">
     <div class="container"></div>
@@ -5,7 +11,7 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-        Static Site Template
+        {{template "title"}}
       </h1>
       <h2 class="subtitle">😎</h2>
     </div>
@@ -14,3 +20,4 @@
     <div class="container"></div>
   </div>
 </section>
+{{end}}
